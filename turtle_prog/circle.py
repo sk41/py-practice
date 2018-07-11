@@ -8,11 +8,36 @@ def draw_circle(rad):
     """
     myTurtle = turtle.Turtle()
     myTurtle.circle(rad)
-    turtle.getscreen()._root.mainloop()
+    #turtle.getscreen()._root.mainloop()
 
+def draw_olympic(radius):
+    myTurtle = turtle.Turtle(shape="circle")
+    myTurtle.circle(radius)
+    myTurtle.penup()
+    myTurtle.setposition(-120, 0)
+    myTurtle.pendown()
+    myTurtle.circle(radius)
+
+    myTurtle.penup()
+    myTurtle.setposition(60, 60)
+    myTurtle.pendown()
+    myTurtle.circle(radius)
+
+    myTurtle.penup()
+    myTurtle.setposition(-60, 60)
+    myTurtle.pendown()
+    myTurtle.circle(radius)
+
+    myTurtle.penup()
+    myTurtle.setposition(-180, 60)
+    myTurtle.pendown()
+    myTurtle.circle(radius)
+
+    turtle.getscreen()._root.mainloop()
 
 def main():
     draw_circle(30)
+    draw_olympic(30)
 
 if __name__ == '__main__':
     main()
