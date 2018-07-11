@@ -11,6 +11,12 @@ def draw_circle(rad):
     #turtle.getscreen()._root.mainloop()
 
 def draw_olympic(radius):
+    """
+    draw olympic circles with given radius
+    TO-DO color the circles
+    :param radius:
+    :return: None
+    """
     myTurtle = turtle.Turtle(shape="circle")
     myTurtle.circle(radius)
     myTurtle.penup()
