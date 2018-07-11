@@ -1,2 +1,10 @@
-# py-practice
-This to practice python rest api
+This repository contains all the assignments project from Udacity
+
+
+## Projects
+
+* File parsing 
+* Regex 
+* UI related projects
+* communication based projects
+* rest api
