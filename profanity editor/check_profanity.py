@@ -10,7 +10,7 @@ def read_text():
     """
     file=open("movie_quotes.txt")
     contents=file.read()
-    file.close()
+    file.close() #fix for issue https://github.com/sk41/py-practice/issues/1
     print(contents)
     profanity_check(contents)
 
