@@ -1,7 +1,9 @@
 import urllib.request
 import urllib
 from urllib.parse import quote
+import logging
 
+logging.basicConfig(level=logging.DEBUG)
 
 def read_text():
     """
@@ -11,7 +13,7 @@ def read_text():
     file=open("movie_quotes.txt")
     contents=file.read()
     file.close() #fix for issue https://github.com/sk41/py-practice/issues/1
-    print(contents)
+    logging.debug(contents)
     profanity_check(contents)
 
 def profanity_check(text_to_check):
