@@ -1,6 +1,7 @@
 from twilio.rest import Client
 import os
 
+
 def send_sms(number):
     """
     to send sms using twilio
