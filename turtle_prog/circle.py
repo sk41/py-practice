@@ -1,19 +1,20 @@
 import turtle
 
-def draw_circle(x, y, color, mTurtle):
+def draw_circle(mTurtle,x, y, color,r):
     """
     Genetic draw circle given co-ordinates and color
+    :param mTurtle: turle object
     :param x: co-ordinate
     :param y: co-ordinate
     :param color: color of circle
-    :param mTurtle: turle object
+    :param r : radius of circle
     :return:
     """
     mTurtle.color(color)
     mTurtle.penup()
     mTurtle.goto(x, y)
     mTurtle.pendown()
-    mTurtle.circle(45)
+    mTurtle.circle(r)
 
 
 
@@ -26,16 +27,16 @@ def draw_olympic(radius):
     """
     myturtle = turtle.Turtle()
     myturtle.width(5)
-    draw_circle(-110, -25, "blue",myturtle)
-    draw_circle(0, -25, "black",myturtle)
-    draw_circle(110, -25, "red",myturtle)
-    draw_circle(-55, -75, "yellow",myturtle)
-    draw_circle(55, -75, "green",myturtle)
+    draw_circle(myturtle,-110, -25, "blue",radius)
+    draw_circle(myturtle,0, -25, "black",radius)
+    draw_circle(myturtle,110, -25, "red",radius)
+    draw_circle(myturtle,-55, -75, "yellow",radius)
+    draw_circle(myturtle,55, -75, "green",radius)
     
     turtle.done()
 
 def main():
-    draw_olympic(30)
+    draw_olympic(45)
 
 if __name__ == '__main__':
     main()
