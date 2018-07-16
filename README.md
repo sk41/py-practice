@@ -5,6 +5,6 @@ This repository contains all the assignments project from Udacity
 
 * File parsing 
 * Regex 
-* UI related projects
+* UI related projects - https://github.com/sk41/py-practice/tree/master/turtle_prog 
 * communication based projects
 * rest api
