@@ -1,6 +1,10 @@
 import urllib.request
 import urllib
 from urllib.parse import quote
+import logging
+
+logging.basicConfig(level=logging.DEBUG,
+                    format='%(asctime)s %(levelname)s %(message)s')
 
 
 def read_text():
@@ -10,8 +14,8 @@ def read_text():
     """
     file=open("movie_quotes.txt")
     contents=file.read()
-    file.close() #fix for issue https://github.com/sk41/py-practice/issues/1
-    print(contents)
+    file.close()
+    logging.debug(contents)
     profanity_check(contents)
 
 def profanity_check(text_to_check):
@@ -21,13 +25,12 @@ def profanity_check(text_to_check):
     :return:
     """
     text_to_check = quote(text_to_check)
-    s= urllib.request.urlopen("http://www.wdylike.appspot.com/?q="+"text_to_check")
+    s= urllib.request.urlopen("http://www.wdylike.appspot.com/?q="+text_to_check)
     output=s.read()
-
-    if True in output:
-       print("Profanity alert!!!")
+    if b'true' in output:
+       logging.debug("Profanity alert!!!")
     else:
-       print("This document has no curse words.")
+        logging.debug("This document has no curse words.")
 
 def main():
     read_text()
