@@ -11,6 +11,6 @@ client = Client(account_sid, auth_token)
 message = client.messages.create(
     to="+17372031940", #this numner has to be register on www.twilio.com
     from_="+18054207492", #generated twilio number
-    body="Hello I am Snehal!!! how are u")
+    body="text msg body goes here!"
 
 print(message.sid)
