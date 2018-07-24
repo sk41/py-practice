@@ -14,7 +14,6 @@ def send_sms(number,twilio_num):
     auth_token  = os.environ['auth_token']
 
     client = Client(account_sid, auth_token)
-
     message = client.messages.create(
         to=number, #this numner has to be register on www.twilio.com
         from_=twilio_num, #generated twilio number
@@ -29,5 +28,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
