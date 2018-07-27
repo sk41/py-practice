@@ -17,5 +17,10 @@ def ingredients(func):
 def sandwich(food="==chicken=="):
     print(food)
 
-sandwich()
 
+
+def main():
+    sandwich()
+
+if __name__ == '__main__':
+    main()
